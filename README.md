@@ -29,13 +29,21 @@ Block Diagram
 Key Features
 
 32-bit data path with parameterized 8-bit address width.
+
 Five AXI4-Lite channels: AW, W, B, AR, and R.
+
 Internal memory of 16 × 32-bit words (64 bytes).
+
 Byte-level write control using WSTRB[3:0].
+
 Read and write address decoding.
+
 Separate read and write datapaths.
+
 Read and write response generation.
+
 Low-power idle monitoring with activity detection.
+
 Standalone burst-style sequencer supporting 1–16 beats with 4-byte address increments.
 
 RTL Modules
@@ -54,13 +62,21 @@ axi_slave_fsm.v, reg_mem_bank.v	Additional standalone modules
 Design Specifications
 
 Parameter	Value
+
 HDL	Verilog
+
 Top Module	axi_liteburst32_top
+
 Address Width	8 bits (parameterized)
+
 Data Width	32 bits
+
 Internal Memory	16 × 32-bit words
+
 Write Strobes	4 bits
+
 Reset	Active-low synchronous
+
 Burst Sequencer Length	1–16 beats
 
 Working Principle
@@ -74,8 +90,11 @@ Low-Power Monitoring: The low-power controller monitors interface activity and g
 Simulation
 
 Open AXI_LiteBurst32.xpr in Vivado.
+
 Set tb_axi_liteburst32_top as the simulation top.
+
 Select Run Simulation → Run Behavioral Simulation.
+
 Verify the simulation transcript and waveforms.
 
 The project includes 14 Verilog testbenches. Run them in Vivado/XSim before reporting test results.
@@ -91,5 +110,7 @@ Report timing, area, power, and verification results only after checking actual 
 Author
 
 Arshad Ali
+
 Electronics & Communication Engineering
+
 ABES Engineering College
